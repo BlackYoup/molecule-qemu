@@ -403,7 +403,7 @@
         host: "{{ molecule_instances_ipv4[item.name] }}"
         port: "{{ item.network_ssh_port }}"
         timeout: "{{ qemu_timeout_ssh }}"
-        search_regex: "OpenSSH"
+        search_regex: "SSH"
       loop: "{{ molecule_instances }}"
       loop_control:
         label: "{{ item.name }}"
